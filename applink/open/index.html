@@ -1,0 +1,13 @@
+<a href="anyshare://https://anyshare.aishu.cn/link/xxx>打开App（AnyShare）：anyshare://https://anyshare.aishu.cn/link/xxx </a><br /><br />
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search)
+    const link = urlParams.get("link");
+    const docid= urlParams.get("docid");
+    const type = urlParams.get("type");
+    
+    const protocolDomainPort = link.split('/')[0] + '//' + link.split('/')[2]
+    const linkId=link.split("/").pop()
+    const url=`${protocolDomainPort}/anyshare/m/zh-cn/linkopenapp/?_linkId=${linkId}&_docid=${docid}&_type=${type}`  
+    window.location.href = url
+</script>
