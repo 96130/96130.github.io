@@ -25,6 +25,6 @@
     
     const protocolDomainPort = link.split('/')[0] + '//' + link.split('/')[2]
     const linkId=link.split("/").pop()
-    const url=`${protocolDomainPort}/anyshare/m/zh-cn/linkopenapp/?linkId=${linkId}&_docid=${docid}&_type=${type}`  
+    const url=`${protocolDomainPort}/anyshare/m/zh-cn/linkopenapp/?_linkId=${linkId}&_docid=${docid}&_type=${type}`  
     window.location.href = url
 </script>
