@@ -18,5 +18,13 @@
 <a href="anyshare://anyshare.aishu.cn/link/3D4006B3AD1D47C2AD3FA42DECF806BD%2F21567D74BD9C42549DD21F2DE8878EEE%2F8DDF644457C14255B6B3874DD263517B%2F36AEF065B1C14B9DBA92F6164026FB69%2F996D4BD074244F2C9F9588A7E653F248%2F54F7CA9FB4FD44BE8A72DFDC83F55DCC%2F0490E49BB8B642DD93A9E65CA12E6693%2F3D048E63C4324694BACD2D8137F7751D">Scheme打开App（旧link=docid）</a><br /><br />
 
 <script>
-    window.location = "https://www.baidu.com"
+    const urlParams = new URLSearchParams(window.location.search)
+    const link = urlParams.get("link");
+    const docid= urlParams.get("docid");
+    const type = urlParams.get("type");
+    
+    const protocolDomainPort = link.split('/')[0] + '//' + link.split('/')[2]
+    const linkId=link.split("/").pop()
+    const url=`${protocolDomainPort}/anyshare/m/zh-cn/linkopenapp/?linkId=${linkId}&_docid=${docid}&_type=${type}`  
+    window.location.href = url
 </script>
