@@ -16,11 +16,12 @@
         const type = urlParams.get("type");
         const lang = urlParams.get("lang") || "zh-cn"
 
-        if (!link) return
-        const protocolDomainPort = link.split('/')[0] + '//' + link.split('/')[2]
-        const linkId = link.split("/").pop()
-        const url = `${protocolDomainPort}/anyshare/m/${lang}/linkopenapp/?_linkId=${linkId}&_docid=${docid}&_type=${type}`
-        window.location.href = url
+        if (link) {
+            const protocolDomainPort = link.split('/')[0] + '//' + link.split('/')[2]
+            const linkId = link.split("/").pop()
+            const url = `${protocolDomainPort}/anyshare/m/${lang}/linkopenapp/?_linkId=${linkId}&_docid=${docid}&_type=${type}`
+            window.location.href = url
+        }
     </script>
 </body>
 
